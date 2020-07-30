@@ -5,12 +5,17 @@
 	<meta charset="utf-8">
 
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
 </head>
 <body>
 
 	
-	<h1>Please, select your langage!</h1>
+
+	
+	<h1>Please, select your language!</h1>
 
 	<div id="center">
 	
@@ -22,8 +27,88 @@
 
 	</div>
 
+	<div id="EnglishBody">
+		
+    	<p id="enP">Hello!!!<br> welcome to the English Space <br>We're still developping our website <br> Click to return</p>
+
+	</div>
+
+
+	<div id="FrenchBody">
+
+		<p id=frP>Salut!!!<br> Bienvenue sur l'espace en Français <br>Le site est en cour de developpement<br> Cliquer pour retourner</p>
+	</div>
+
+	<div id="GermanBody">
+		
+		
+ 		<p id="deP"> Hallo !!! <br> Willkommen im englischen Raum <br> Wir entwickeln noch unsere Website <br> Klicken Sie hier, um zurückzukehren </p>
+
+	</div>
+
+	<div id="KitubaBody">
+		
+		<p id="cgP">Mboté!!!<br> Kou kuiza ya mboté na el ya kikongo <br>Beto ké tété na yidika site ya béto <br> Niema awa na kou voutouka</p>
+	</div>
+
 <style type="text/css">
 
+	#EnglishBody{
+		position: absolute;
+		left: -2000px;
+		top: 0px;
+		background-color:#780000;
+		transition-duration: 0.8s;
+		color:white;
+		width: 100%;
+		height: 100vh;
+		z-index: 1;
+	}
+
+	#FrenchBody{
+		position: absolute;
+		left: -2000px;
+		top: 0px;
+		background-color:#095D11;
+		color:white;
+		width: 100%;
+		height: 100vh;
+		transition-duration: 0.8s;
+		z-index: 1;
+	}
+
+	#GermanBody{
+		position: absolute;
+		left: -2000px;
+		top: 0px;
+		background-color:#01045A;
+		transition-duration: 0.8s;
+		color:white;
+		width: 100%;
+		height: 100vh;
+		z-index: 1;
+	}
+
+	#KitubaBody{
+		position: absolute;
+		left: -2000px;
+		top: 0px;
+		background-color:#8D6C01;
+		transition-duration: 0.8s;
+		color:white;
+		width: 100%;
+		height: 100vh;
+		z-index: 1;
+
+	}
+	p{
+		position: absolute;
+		left: 37%;
+		top: 35vh;
+		font-size: 25px;
+		cursor: pointer;
+		font-family: 'Recursive', sans-serif;
+	}
 
 	
 	body{
@@ -33,7 +118,7 @@
 	#center{
 		position: absolute;
 
-		left:42%;
+		left:43%;
 		top: 30%;
 		
 		background-color: #white;
@@ -62,6 +147,10 @@
 
 
 @media only screen and  (max-width:767px) {
+	p{
+		left: 2px;
+		top: 20vh;
+	}
 	
 	body{
 		background-color: black;
@@ -125,10 +214,148 @@
 
 }
 
+
+
+
 	
 </style>
 
+<script type="text/javascript">
 
+
+	function anim(nom){
+
+		alert(nom);
+
+	}
+
+
+
+
+	
+	var btnEnglish=document.getElementById('btnEnglish')
+	var btnFrench=document.getElementById("btnFrench")
+	var btnGerman=document.getElementById('btnGerman')
+	var btnKituba=document.getElementById('btnKituba')
+
+
+
+
+
+
+
+	/*action eventListener
+
+	*/
+
+	btnEnglish.addEventListener('click', function(){
+
+		var v=document.getElementById("EnglishBody")
+		position=v.offsetLeft;
+
+		if (position==-2000){
+			EnglishBody.style.left="0px";
+		}
+		else if (position==0){
+			EnglishBody.style.left="-2000px"
+		}
+	})
+
+
+	
+
+	btnFrench.addEventListener('click', function(){
+
+
+		var v=document.getElementById("FrenchBody")
+		position=v.offsetLeft;
+
+		if (position==-2000){
+			FrenchBody.style.left="0px";
+		}
+		else if (position==0){
+			FrenchBody.style.left="-2000px"
+		}
+	})
+
+	btnGerman.addEventListener('click', function(){
+		var v=document.getElementById("GermanBody")
+		position=v.offsetLeft;
+
+		if (position==-2000){
+			GermanBody.style.left="0px";
+		}
+		else if (position==0){
+			GermanBody.style.left="-2000px"
+		}
+	})
+
+	btnKituba.addEventListener('click', function(){
+		var v=document.getElementById("KitubaBody")
+		position=v.offsetLeft;
+
+		if (position==-2000){
+			KitubaBody.style.left="0px";
+		}
+		else if (position==0){
+			KitubaBody.style.left="-2000px"
+		}
+	})
+
+
+
+	enP=document.getElementById("enP");
+
+	enP.addEventListener('click',function(){
+		var vE=document.getElementById("EnglishBody")
+		posE=vE.offsetLeft;
+
+		if (posE==0){
+			EnglishBody.style.left="-2000px"
+		}
+})
+
+	frP=document.getElementById("frP");
+
+	frP.addEventListener('click',function(){
+	
+	var vF=document.getElementById("FrenchBody")
+		posF=vF.offsetLeft;
+
+		if (posF==0){
+			FrenchBody.style.left="-2000px"
+		}
+
+	})
+		deP=document.getElementById("deP")
+
+		deP.addEventListener('click',function(){
+			var vG=document.getElementById("GermanBody")
+		posG=vG.offsetLeft;
+
+		if (posG==0){
+			GermanBody.style.left="-2000px"
+		}
+
+		})
+
+		
+
+		cgP=document.getElementById("cgP")
+
+		cgP.addEventListener('click',function(){
+			var vG=document.getElementById("KitubaBody")
+		posG=vG.offsetLeft;
+
+		if (posG==0){
+			KitubaBody.style.left="-2000px"
+		}
+			
+		})
+
+
+
+</script>
 
 </body>
 </html>
