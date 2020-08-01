@@ -11,6 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Recursive&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand&family=Recursive&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,7 +27,6 @@
 	<button id="btnEnglish">English</button>
 	<button id="btnFrench">Français</button><br>
 	<button id="btnGerman">Deutsch</button>
-	<button id="btnKituba">Kituba</button>
 
 	</div>
 
@@ -37,14 +38,16 @@
     		<p id="txt1">Hi, you can call me <br></p>
 
     		<p id="txtName"><b> Richnel BANDOHO.</b></p>
-    		<p id="txt2">I'm a magician I make your dream come true</p>
+    		<p id="txt2">I make your dream come true</p>
 
     	 	<p id="txtCompl">I'm a software Engineer living in Tunisia,<br>I developpe high quality websites, software, application<br> using a lot of programming languages...
     		 </p> 
 
-
+    		
 
     	 </div>
+
+    	  <div id="profil"> </div>
 
     	  <button id="btnPortfolio">Portfolio</button>
     	  <button id="btnMyCv">Cv</button>
@@ -57,41 +60,45 @@
 
 	<div id="cvPage">
 		
-
+			<button id="btnClose1">Close</button>
+			<a id="cvDownload" href="Cv_BANDOHO.pdf" download="Cv"> Click to download my cv </a>
 	</div>
 
 	</div>
 
 
 
-	
 
-
-	<div id="FrenchBody">
-
-		<div id="left">
-			
-
-		</div>
-
-		
-		<button id=frP>Retour</button>
-		<p>Salut!!!<br> Bienvenue sur l'espace en Français <br>Le site est en cour de developpement.</p>
-	</div>
-
-	<div id="GermanBody">
-		<button id="deP">Rückkehr</button>
-		
- 		<p> Hallo !!! <br> Willkommen im englischen Raum <br> Wir entwickeln noch unsere Website.</p>
-
-	</div>
-
-	<div id="KitubaBody">
-		<button id="cgP">Kou voutouka</button>
-		<p>Mboté!!!<br> Kou kuiza ya mboté na el ya kikongo <br>Beto ké tété na yidika site ya béto.</p>
-	</div>
 
 <style type="text/css">
+
+	#profil{
+		position: absolute;
+		right: 10%;
+		top: 15vh;
+		background:url("profil2.jpeg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 380px;
+		height: 380px;
+		border-radius: 100%;
+	}
+
+	#cvDownload{
+		
+		position: absolute;
+		left: 35%;
+		top: 43vh;
+		font-size: 35px;
+		text-decoration: none;
+		color: white;
+		transition-duration: 0.3s;
+		font-family: 'Recursive', sans-serif;
+
+	}
+	#cvDownload:hover{
+		font-size: 37px;
+	}
 
 	#btnClose{
 		width: 150px;
@@ -102,6 +109,16 @@
 		top: 15px;
 	}
 
+	#btnClose1{
+		width: 150px;
+		height: 25px;
+		border-radius: 10px;
+		position: absolute;
+		left: 45%;
+		top: 15px;
+	}
+
+
 	#portfolioPage{
 		position: absolute;
 		height: 50px;
@@ -111,7 +128,18 @@
 		z-index: 3;
 		opacity: 0;
 		transition-duration: 0.5s;
-		background-color: #9E8902;
+		background-color: #242A38;
+	}
+	#cvPage{
+		position: absolute;
+		height: 50px;
+		width: 80%;
+		left: 10%;
+		top:50vh;
+		z-index: 3;
+		opacity: 0;
+		transition-duration: 0.5s;
+		background-color: #242A38;
 	}
 
 
@@ -145,6 +173,8 @@
 		left: 0px;
 		font-size: 25px;
 		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 7px;
+
 	}
 	#txtName{
 
@@ -174,33 +204,7 @@
 		border-radius: 10px;
 	}
 
-	#frP{
-		position: absolute;
-		top:10px;
-		width:150px;
-		height: 25px;
-		left: 10px;
-		border-radius: 10px;
-	}
-
-	#deP{
-		position: absolute;
-		top:10px;
-		width:150px;
-		height: 25px;
-		left: 10px;
-		border-radius: 10px;
-
-	}
-
-	#cgP{
-		position: absolute;
-		top:10px;
-		width:150px;
-		height: 25px;
-		left: 10px;
-		border-radius: 10px;
-	}
+	
 	#EnglishBody{
 		position: absolute;
 		left: -2000px;
@@ -213,42 +217,6 @@
 		z-index: 1;
 	}
 
-	#FrenchBody{
-		position: absolute;
-		left: -2000px;
-		top: 0px;
-		background-color: #242A38;
-		color:white;
-		width: 100%;
-		height: 100vh;
-		transition-duration: 0.8s;
-		z-index: 1;
-	}
-
-	#GermanBody{
-		position: absolute;
-		left: -2000px;
-		top: 0px;
-		background-color: #242A38;
-		transition-duration: 0.8s;
-		color:white;
-		width: 100%;
-		height: 100vh;
-		z-index: 1;
-	}
-
-	#KitubaBody{
-		position: absolute;
-		left: -2000px;
-		top: 0px;
-		background-color: #242A38;
-		transition-duration: 0.8s;
-		color:white;
-		width: 100%;
-		height: 100vh;
-		z-index: 1;
-
-	}
 	p{
 		position: absolute;
 		left: 10%;
@@ -274,26 +242,29 @@
 		color:white;
 	}
 	#center{
-		position: absolute;
+		/*position: absolute;*/
 
-		left:43%;
-		top: 30%;
-		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width:100%;
+		height: 80vh;
+
 		background-color: #white;
 		opacity: 1;
 	}
 
 	h1{
 		position: absolute;
-		left: 30%;
+		left: 36%;
 		top:14vh;
 		
 	}
 	button{
 		margin-top: 10px;
-		margin-left: 5px;
-		height: 110px;
-		width: 110px;
+		margin-left: 15px;
+		height: 105px;
+		width: 105px;
 		cursor: pointer;
 		color:white;
 		background-color: transparent;
@@ -317,6 +288,7 @@
 
 	button{
 		color:white;
+
 	}
 	h1{
 		position: absolute;
@@ -354,19 +326,9 @@
 		height: 7vh;
 		border-radius: 10px;
 	}
-	#btnKituba{
-		/*margin:auto;*/
-		margin-top: 15px;
-		position: absolute;
-		left: 20%;
-		top:24vh;
-		width:60%;
-		height: 7vh;
-		border-radius: 10px;
-	}
+	
 	#center{
 		position: absolute;
-
 		left:0%;
 		width: 100%;
 	}
@@ -409,9 +371,22 @@
 		c.style.top="1vh";
 		c.style.left="1%"
 
-		c.style.width="98%"
+		c.style.width="98%";
+	})
 
-	
+	var btnMyCv=document.getElementById('btnMyCv');
+
+	btnMyCv.addEventListener('click',function(){
+
+		var c=document.getElementById("cvPage");
+
+		c.style.opacity="1";
+		c.style.height="98vh";
+		c.style.top="1vh";
+		c.style.left="1%"
+
+		c.style.width="98%";
+
 	})
 
 
@@ -433,6 +408,24 @@
 
 	})
 
+	var btnClose1=document.getElementById("btnClose1");
+
+	btnClose1.addEventListener('click',function(){
+		
+
+		var c=document.getElementById("cvPage");
+
+		c.style.opacity="0";
+		c.style.height="50px";
+		c.style.top="50vh";
+		c.style.left="10px"
+
+		c.style.width="98%"
+
+
+
+	})
+
 	/*action eventListener
 
 	*/
@@ -441,6 +434,30 @@
 
 		var v=document.getElementById("EnglishBody")
 		position=v.offsetLeft;
+
+
+		var t=document.getElementById("txt1");
+		var u=document.getElementById("txt2");
+		var v=document.getElementById("txtCompl");
+		var w=document.getElementById("enP");
+		var x=document.getElementById("btnClose");
+		var y=document.getElementById("btnClose1");
+		var z=document.getElementById("cvDownload");
+
+		t.innerHTML="Hi, you can call me";
+		u.innerHTML="I make your dream come true";
+		v.innerHTML="I'm a software Engineer living in Tunisia,<br>I developpe high quality websites, software, application<br>using a lot of programming languages...";
+
+		w.innerHTML="Back";
+		x.innerHTML="Back";
+		y.innerHTML="Close";
+		z.innerHTML="Click to download my cv";
+
+
+
+
+
+
 
 		if (position==-2000){
 			EnglishBody.style.left="0px";
@@ -456,38 +473,67 @@
 	btnFrench.addEventListener('click', function(){
 
 
-		var v=document.getElementById("FrenchBody")
+		var v=document.getElementById("EnglishBody")
 		position=v.offsetLeft;
 
+		var t=document.getElementById("txt1");
+		var u=document.getElementById("txt2");
+		var v=document.getElementById("txtCompl");
+		var w=document.getElementById("enP");
+		var x=document.getElementById("btnClose");
+		var y=document.getElementById("btnClose1");
+		var z=document.getElementById("cvDownload");
+
+		t.innerHTML="Salut, je m'appelle";
+		u.innerHTML="Je peux réaliser ton rêve";
+		v.innerHTML="Je suis un ingenieur en genie logiciel vivant en tunisie<br>Je developpe des sites web, logiciel et application de haute qualités<br>Utilisant plusieurs languages de programmation.<br><br>Ma seule limite, ton imagination ... ";
+
+		w.innerHTML="Retour";
+		x.innerHTML="Fermer";
+		y.innerHTML="Fermer";
+		z.innerHTML="Telecharger mon Cv";
+
 		if (position==-2000){
-			FrenchBody.style.left="0px";
+			EnglishBody.style.left="0px";
 		}
 		else if (position==0){
-			FrenchBody.style.left="-2000px"
+			EnglishBody.style.left="-2000px"
 		}
 	})
 
 	btnGerman.addEventListener('click', function(){
-		var v=document.getElementById("GermanBody")
+		var v=document.getElementById("EnglishBody")
 		position=v.offsetLeft;
 
+
+		var t=document.getElementById("txt1");
+		var u=document.getElementById("txt2");
+		var v=document.getElementById("txtCompl");
+		var w=document.getElementById("enP");
+		var x=document.getElementById("btnClose");
+		var y=document.getElementById("btnClose1");
+		var z=document.getElementById("cvDownload");
+
+		t.innerHTML="Hallo,Ich heiss";
+		u.innerHTML="Ich kann deinen Traum wahr werden lassen";
+		v.innerHTML="Ich bin ein in Tunesien lebender Software-Ingenieur. <br> Ich entwickle hochwertige Websites, Software und Anwendungen. <br> Ich benutze mehrere Programmiersprachen. <br><br> Meine einzige Grenze, Ihre Vorstellungskraft ...";
+
+		w.innerHTML="Rückkehr";
+		x.innerHTML="Schließen";
+		y.innerHTML="Schließen";
+		z.innerHTML="Laden Sie meinen Lebenslauf herunter";
+
+
+
+
+
+
+
 		if (position==-2000){
-			GermanBody.style.left="0px";
+			EnglishBody.style.left="0px";
 		}
 		else if (position==0){
-			GermanBody.style.left="-2000px"
-		}
-	})
-
-	btnKituba.addEventListener('click', function(){
-		var v=document.getElementById("KitubaBody")
-		position=v.offsetLeft;
-
-		if (position==-2000){
-			KitubaBody.style.left="0px";
-		}
-		else if (position==0){
-			KitubaBody.style.left="-2000px"
+			EnglishBody.style.left="-2000px"
 		}
 	})
 
@@ -504,44 +550,9 @@
 		}
 })
 
-	frP=document.getElementById("frP");
-
-	frP.addEventListener('click',function(){
 	
-	var vF=document.getElementById("FrenchBody")
-		posF=vF.offsetLeft;
-
-		if (posF==0){
-			FrenchBody.style.left="-2000px"
-		}
-
-	})
-		deP=document.getElementById("deP")
-
-		deP.addEventListener('click',function(){
-			var vG=document.getElementById("GermanBody")
-		posG=vG.offsetLeft;
-
-		if (posG==0){
-			GermanBody.style.left="-2000px"
-		}
-
-		})
 
 		
-
-		cgP=document.getElementById("cgP")
-
-		cgP.addEventListener('click',function(){
-			var vG=document.getElementById("KitubaBody")
-		posG=vG.offsetLeft;
-
-		if (posG==0){
-			KitubaBody.style.left="-2000px"
-		}
-			
-		})
-
 
 
 </script>
