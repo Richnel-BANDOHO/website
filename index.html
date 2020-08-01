@@ -9,6 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Recursive&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -28,10 +30,41 @@
 	</div>
 
 	<div id="EnglishBody">
-		<button id="enP">Back</button>		
-    	<p>Hello!!!<br> welcome to the English Space <br>We're still developping our website.</p>
+		<button id="enP">Back</button>	
+
+		<div id="textIntro">
+    	
+    		<p id="txt1">Hi, you can call me <br></p>
+
+    		<p id="txtName"><b> Richnel BANDOHO.</b></p>
+    		<p id="txt2">I'm a magician I make your dream come true</p>
+
+    	 	<p id="txtCompl">I'm a software Engineer living in Tunisia,<br>I developpe high quality websites, software, application<br> using a lot of programming languages...
+    		 </p> 
+
+
+
+    	 </div>
+
+    	  <button id="btnPortfolio">Portfolio</button>
+    	  <button id="btnMyCv">Cv</button>
+
+    	  <div id="portfolioPage">
+			
+			<button id="btnClose">Close</button>
+
+		  </div>
+
+	<div id="cvPage">
+		
 
 	</div>
+
+	</div>
+
+
+
+	
 
 
 	<div id="FrenchBody">
@@ -59,6 +92,78 @@
 	</div>
 
 <style type="text/css">
+
+	#btnClose{
+		width: 150px;
+		height: 25px;
+		border-radius: 10px;
+		position: absolute;
+		left: 45%;
+		top: 15px;
+	}
+
+	#portfolioPage{
+		position: absolute;
+		height: 50px;
+		width: 80%;
+		left: 10%;
+		top:50vh;
+		z-index: 3;
+		opacity: 0;
+		transition-duration: 0.5s;
+		background-color: #9E8902;
+	}
+
+
+	#btnPortfolio{
+		position: absolute;
+		border-radius: 10px;
+		width: 150px;
+		height: 25px;
+		top: 85vh;
+		left: 35%;
+	}
+	#btnMyCv{
+		position: absolute;
+		border-radius: 10px;
+		width: 150px;
+		height: 25px;
+		top: 85vh;
+		left: 50%;
+	}
+
+	#txt1{
+		position: absolute;
+		top:10px;
+		left:0px;
+		font-size: 13px;
+		font-family: 'Montserrat', sans-serif;
+	}
+	#txt2{
+		position: absolute;
+		top:70px;
+		left: 0px;
+		font-size: 25px;
+		font-family: 'Montserrat', sans-serif;
+	}
+	#txtName{
+
+		position: absolute;
+		top:18px;
+		left: 0px;
+		font-size: 30px;
+		letter-spacing: 7px;
+		font-family: 'Montserrat', sans-serif;
+
+	}
+
+	#txtCompl{
+		position: absolute;
+		top:150px;
+		left: 0px;
+		font-size: 13px;
+		font-family: 'Montserrat', sans-serif;
+	}
 
 	#enP{
 		position: absolute;
@@ -100,7 +205,7 @@
 		position: absolute;
 		left: -2000px;
 		top: 0px;
-		background-color:#780000;
+		background-color: #242A38;
 		transition-duration: 0.8s;
 		color:white;
 		width: 100%;
@@ -112,7 +217,7 @@
 		position: absolute;
 		left: -2000px;
 		top: 0px;
-		background-color:#095D11;
+		background-color: #242A38;
 		color:white;
 		width: 100%;
 		height: 100vh;
@@ -124,7 +229,7 @@
 		position: absolute;
 		left: -2000px;
 		top: 0px;
-		background-color:#01045A;
+		background-color: #242A38;
 		transition-duration: 0.8s;
 		color:white;
 		width: 100%;
@@ -136,7 +241,7 @@
 		position: absolute;
 		left: -2000px;
 		top: 0px;
-		background-color:#8D6C01;
+		background-color: #242A38;
 		transition-duration: 0.8s;
 		color:white;
 		width: 100%;
@@ -146,15 +251,26 @@
 	}
 	p{
 		position: absolute;
-		left: 37%;
-		top: 35vh;
+		left: 10%;
+		top: 25vh;
+		font-size:25px;
+		font-family: 'Recursive', sans-serif;
+	}
+
+	#textIntro{
+		position: absolute;
+		height: 250px;
+		width: 600px;
+		background-color: #242A38;
+		left: 10%;
+		top: 25vh;
 		font-size:25px;
 		font-family: 'Recursive', sans-serif;
 	}
 
 	
 	body{
-		background-color:#036E5F;
+		background-color: #242A38;
 		color:white;
 	}
 	#center{
@@ -282,10 +398,40 @@
 	var btnKituba=document.getElementById('btnKituba')
 
 
+	var btnPortfolio=document.getElementById('btnPortfolio')
+
+	btnPortfolio.addEventListener('click',function(){
+
+		var c=document.getElementById("portfolioPage");
+
+		c.style.opacity="1";
+		c.style.height="98vh";
+		c.style.top="1vh";
+		c.style.left="1%"
+
+		c.style.width="98%"
+
+	
+	})
+
+
+	var btnClose=document.getElementById("btnClose");
+
+	btnClose.addEventListener('click',function(){
+		
+
+		var c=document.getElementById("portfolioPage");
+
+		c.style.opacity="0";
+		c.style.height="50px";
+		c.style.top="50vh";
+		c.style.left="10px"
+
+		c.style.width="98%"
 
 
 
-
+	})
 
 	/*action eventListener
 
