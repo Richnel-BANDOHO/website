@@ -61,6 +61,7 @@
 	<div id="cvPage">
 		
 			<button id="btnClose1">Close</button>
+
 			<a id="cvDownload" href="Cv_BANDOHO.pdf" download="Cv"> Click to download my cv </a>
 	</div>
 
@@ -76,22 +77,26 @@
 		position: absolute;
 		right: 10%;
 		top: 15vh;
-		background:url("profil2.jpeg");
+		background:url("profil3.jpeg");
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 70%;
 		width: 380px;
 		height: 380px;
 		border-radius: 100%;
+	
 	}
 
 	#cvDownload{
 		
-		position: absolute;
-		left: 35%;
-		top: 43vh;
+		/*position: absolute;*/
+		display: flex;
+
+		justify-content: center;
+		align-items: center;
 		font-size: 35px;
 		text-decoration: none;
-		color: white;
+		color: orange;
+		letter-spacing: 7px;
 		transition-duration: 0.3s;
 		font-family: 'Recursive', sans-serif;
 
@@ -108,6 +113,9 @@
 		left: 45%;
 		top: 15px;
 	}
+	#btnClose:hover{
+		font-size: 16px;
+	}
 
 	#btnClose1{
 		width: 150px;
@@ -116,6 +124,9 @@
 		position: absolute;
 		left: 45%;
 		top: 15px;
+	}
+	#btnClose1:hover{
+		font-size: 16px;
 	}
 
 
@@ -151,6 +162,9 @@
 		top: 85vh;
 		left: 35%;
 	}
+	#btnPortfolio:hover{
+		font-size: 16px;
+	}
 	#btnMyCv{
 		position: absolute;
 		border-radius: 10px;
@@ -158,6 +172,9 @@
 		height: 25px;
 		top: 85vh;
 		left: 50%;
+	}
+	#btnMyCv:hover{
+		font-size: 16px;
 	}
 
 	#txt1{
@@ -181,6 +198,7 @@
 		position: absolute;
 		top:18px;
 		left: 0px;
+		color: orange;
 		font-size: 30px;
 		letter-spacing: 7px;
 		font-family: 'Montserrat', sans-serif;
@@ -203,7 +221,9 @@
 		left: 10px;
 		border-radius: 10px;
 	}
-
+	#enP:hover{
+		font-size: 16px;
+	}
 	
 	#EnglishBody{
 		position: absolute;
@@ -263,16 +283,26 @@
 	button{
 		margin-top: 10px;
 		margin-left: 15px;
-		height: 105px;
-		width: 105px;
+		height: 110px;
+		width: 110px;
 		cursor: pointer;
+		border:1px solid;
+		border-color:#fff;
 		color:white;
 		background-color: transparent;
+		transition-duration: 0.15s;
 		font-size: 16px;
-		border-color: #fff;
 		border-radius: 100%;
 		outline:none;
 
+	}
+	button:hover{
+		border-color:orange;
+		border:3px solid;
+		color:orange;
+		height:115px;
+		width: 115px;
+		font-size: 19px;
 	}
 
 
@@ -305,7 +335,9 @@
 		height: 7vh;
 		left: 20%;
 		border-radius: 10px;
+		
 	}
+	
 	#btnFrench{
 		position: absolute;
 		margin-top: 15px;
@@ -424,6 +456,8 @@
 
 
 
+
+
 	})
 
 	/*action eventListener
@@ -449,7 +483,7 @@
 		v.innerHTML="I'm a software Engineer living in Tunisia,<br>I developpe high quality websites, software, application<br>using a lot of programming languages...";
 
 		w.innerHTML="Back";
-		x.innerHTML="Back";
+		x.innerHTML="Close";
 		y.innerHTML="Close";
 		z.innerHTML="Click to download my cv";
 
@@ -524,11 +558,6 @@
 		z.innerHTML="Laden Sie meinen Lebenslauf herunter";
 
 
-
-
-
-
-
 		if (position==-2000){
 			EnglishBody.style.left="0px";
 		}
@@ -536,7 +565,6 @@
 			EnglishBody.style.left="-2000px"
 		}
 	})
-
 
 
 	enP=document.getElementById("enP");
@@ -550,9 +578,6 @@
 		}
 })
 
-	
-
-		
 
 
 </script>
