@@ -57,6 +57,11 @@
     	  <div id="portfolioPage">
 			
 			<button id="btnClose">Close</button>
+		  	<button id="btnMob">Mobile</button>
+			<button id="btnWeb">Web</button>
+			<button id="btnAll">Tout</button>
+		  
+		  
 		  <div id="prjt1"></div>
 		   
 
@@ -79,12 +84,26 @@
 	
 	#prjt1{
 		position:absolute;
-	background-color:orange;
-	width:40vh;
-	height:27%;
+		background-color:orange;
+		width:40vh;
+		height:27%;
+		left:5%;
+		top:10vh;
+	}
 	
-	left:5%;
-	top:10vh;
+	button{
+		width: 200px;
+		height: 25px;
+		background: orange;
+		outline: none;
+		cursor: pointer;color: white;
+		border-color: transparent;
+		border-radius: 100px 100px 100px 100px;
+
+	}
+	button:hover{
+		background-color: #fff;
+		color: #000;
 	}
 	
 
@@ -560,10 +579,6 @@
 			EnglishBody.style.left="-2000px"
 		}
 })
-
-	
-
-		
 
 
 </script>
