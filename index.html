@@ -27,8 +27,7 @@
 	
 
 		<button id="btnEnglish">English</button>
-		<button id="btnFrench">Français</button><br>
-		<button id="btnGerman">Deutsch</button>
+		<button id="btnFrench">Français</button>
 
 	</div>
 
@@ -93,10 +92,7 @@
 		font-size: 22px;
 		letter-spacing: 1px;
 	}
-	#btnGerman{
-		font-size: 22px;
-		letter-spacing: 1px;
-	}
+	
 	#btnFrench{
 		font-size: 22px;
 		letter-spacing: 1px;
@@ -376,16 +372,7 @@
 		height:7vh;
 		border-radius: 10px;
 	}
-	#btnGerman{
-		/*margin:auto;*/
-		margin-top: 15px;
-		position: absolute;
-		top:16vh;
-		width:60%;
-		left: 20%;
-		height: 7vh;
-		border-radius: 10px;
-	}
+	
 	
 	#center{
 		position: absolute;
@@ -410,8 +397,7 @@
 	
 	var btnEnglish=document.getElementById('btnEnglish')
 	var btnFrench=document.getElementById("btnFrench")
-	var btnGerman=document.getElementById('btnGerman')
-	var btnKituba=document.getElementById('btnKituba')
+	
 
 
 
@@ -560,41 +546,7 @@
 		}
 	})
 
-	btnGerman.addEventListener('click', function(){
-		var v=document.getElementById("EnglishBody")
-		position=v.offsetLeft;
-
-
-		var t=document.getElementById("txt1");
-		var u=document.getElementById("txt2");
-		var v=document.getElementById("txtCompl");
-		var w=document.getElementById("enP");
-		var x=document.getElementById("btnClose");
-		var y=document.getElementById("btnClose1");
-		var z=document.getElementById("cvDownload");
-
-		t.innerHTML="Hallo, mein name ist";
-		u.innerHTML="Ich kann deinen Traum wahr werden lassen";
-		v.innerHTML="Ich bin ein in Tunesien lebender Software-Ingenieur. <br> Ich entwickle hochwertige Websites, Software und Anwendungen. <br> Ich benutze mehrere Programmiersprachen. <br><br> Meine einzige Grenze, Ihre Vorstellungskraft ...";
-
-		w.innerHTML="Zurück";
-		x.innerHTML="Schließen";
-		y.innerHTML="Schließen";
-		z.innerHTML="Laden Sie meinen <br>Lebenslauf herunter";
-
-
-
-
-
-
-
-		if (position==-2000){
-			EnglishBody.style.left="0px";
-		}
-		else if (position==0){
-			EnglishBody.style.left="-2000px"
-		}
-	})
+	
 
 
 
